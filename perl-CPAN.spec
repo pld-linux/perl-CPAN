@@ -8,7 +8,7 @@ Summary:	CPAN Perl module - query, download and build Perl modules from CPAN sit
 Summary(pl):	Modu³ Perla CPAN - odpytywanie, ¶ci±ganie i budowanie modu³ów Perla z serwisów CPAN
 Name:		perl-CPAN
 Version:	1.65
-Release:	1
+Release:	2
 License:	?
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
@@ -36,7 +36,8 @@ Net::FTP lub LWP (albo lynksa czy zewnêtrznego klienta ftp) do
 %setup -q -n %{pdir}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:%{__make} test}
@@ -53,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog Todo
 %attr(755,root,root) %{_bindir}/cpan
-%{perl_privlib}/*.pm
-%{perl_privlib}/%{pdir}/*.pm
+%{perl_vendorlib}/*.pm
+%{perl_vendorlib}/%{pdir}/*.pm
 %{_mandir}/man1/*
 %{_mandir}/man3/C*
