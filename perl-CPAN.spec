@@ -12,6 +12,7 @@ Release:	3
 License:	?
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+# Source0-md5:	d6f2c0e0c1888d0f980214d640df5257
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl-Test-Simple
