@@ -24,13 +24,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The CPAN module is designed to automate the make and install of perl
 modules and extensions. It includes some searching capabilities and
-knows how to use Net::FTP or LWP (or lynx or an external ftp client)
+knows how to use Net::FTP or LWP (or lynx or an external FTP client)
 to fetch the raw data from the net.
 
 %description -l pl
 Modu³ CPAN s³u¿y do automatyzacji procesu budowania i instalowania
 modu³ów i rozszerzeñ Perla. Ma mo¿liwo¶æ wyszukiwania i u¿ywania
-Net::FTP lub LWP (albo lynksa czy zewnêtrznego klienta ftp) do
+Net::FTP lub LWP (albo lynksa czy zewnêtrznego klienta FTP) do
 ¶ci±gania danych z sieci.
 
 %prep
