@@ -7,12 +7,12 @@
 Summary:	CPAN Perl module - query, download and build Perl modules from CPAN sites
 Summary(pl):	Modu³ Perla CPAN - odpytywanie, ¶ci±ganie i budowanie modu³ów Perla z serwisów CPAN
 Name:		perl-CPAN
-Version:	1.71
+Version:	1.76
 Release:	1
 License:	?
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
-# Source0-md5:	fafac3333492ac1161e605a00a79c48e
+# Source0-md5:	dfd1d2f8cfe75559e37d543d0c5f6606
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl-Test-Simple
