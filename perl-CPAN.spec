@@ -56,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog Todo
 %attr(755,root,root) %{_bindir}/cpan
 %{perl_vendorlib}/*.pm
-%{perl_vendorlib}/%{pdir}/*.pm
+%dir %{perl_vendorlib}/CPAN
+%{perl_vendorlib}/CPAN/*.pm
 %{_mandir}/man1/*
 %{_mandir}/man3/C*
