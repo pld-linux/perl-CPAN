@@ -9,7 +9,7 @@ Summary(pl):	Modu³ Perla CPAN - odpytywanie, ¶ci±ganie i budowanie modu³ów Perla
 Name:		perl-CPAN
 Version:	1.76
 Release:	1
-License:	?
+License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 # Source0-md5:	dfd1d2f8cfe75559e37d543d0c5f6606
