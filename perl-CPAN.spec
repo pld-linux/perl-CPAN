@@ -4,8 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CPAN
-Summary:	CPAN - query, download and build perl modules from CPAN sites
-#Summary(pl):	
+Summary:	CPAN Perl module - query, download and build Perl modules from CPAN sites
+Summary(pl):	Modu³ Perla CPAN - odpytywanie, ¶ci±ganie i budowanie modu³ów Perla z serwisów CPAN
 Name:		perl-CPAN
 Version:	1.63
 Release:	1
@@ -16,6 +16,7 @@ Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl-Test-Simple
 %endif
+BuildRequires:	rpm-perlprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,8 +26,11 @@ modules and extensions. It includes some searching capabilities and
 knows how to use Net::FTP or LWP (or lynx or an external ftp client)
 to fetch the raw data from the net.
 
-# %description -l pl
-# TODO
+%description -l pl
+Modu³ CPAN s³u¿y do automatyzacji procesu budowania i instalowania
+modu³ów i rozszerzeñ Perla. Ma mo¿liwo¶æ wyszukiwania i u¿ywania
+Net::FTP lub LWP (albo lynksa czy zewnêtrznego klienta ftp) do
+¶ci±gania danych z sieci.
 
 %prep
 %setup -q -n %{pdir}-%{version}
