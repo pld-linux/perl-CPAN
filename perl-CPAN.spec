@@ -57,6 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/cpan
 %{perl_vendorlib}/*.pm
 %{perl_vendorlib}/%{pdir}/*.pm
-%{perl_vendorlib}/Bundle/*.pm
 %{_mandir}/man1/*
-%{_mandir}/man3/[BC]*
+%{_mandir}/man3/C*
