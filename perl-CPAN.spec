@@ -11,7 +11,7 @@ Version:	1.63
 Release:	1
 License:	?
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl(File::Spec)
 BuildRequires:	perl-Test-Simple
