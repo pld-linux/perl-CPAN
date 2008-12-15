@@ -9,10 +9,12 @@ Summary(pl.UTF-8):	Moduł Perla CPAN - odpytywanie, ściąganie i budowanie modu
 Name:		perl-CPAN
 Version:	1.9301
 Release:	1
-License:	unknown
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/CPAN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	291ef4d76121718d6ebad25fcde40395
+URL:		http://search.cpan.org/dist/CPAN/
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
 %endif
