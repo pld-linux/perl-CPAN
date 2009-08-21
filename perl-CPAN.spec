@@ -7,13 +7,13 @@
 Summary:	CPAN Perl module - query, download and build Perl modules from CPAN sites
 Summary(pl.UTF-8):	Moduł Perla CPAN - odpytywanie, ściąganie i budowanie modułów Perla z serwisów CPAN
 Name:		perl-CPAN
-Version:	1.9304
+Version:	1.9402
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CPAN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	32d0caf8c1344e5268fbe8b5ae800236
+# Source0-md5:	70e43824c20cde64aa7b1b9e684b119f
 URL:		http://search.cpan.org/dist/CPAN/
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
@@ -51,8 +51,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%clean
-rm -rf $RPM_BUILD_ROOT
+#%clean
+#rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
@@ -61,5 +61,11 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/*.pm
 %dir %{perl_vendorlib}/CPAN
 %{perl_vendorlib}/CPAN/*.pm
+%dir %{perl_vendorlib}/CPAN/Exception
+%{perl_vendorlib}/CPAN/Exception/*.pm
+%dir %{perl_vendorlib}/CPAN/FTP
+%{perl_vendorlib}/CPAN/FTP/netrc.pm
+%dir %{perl_vendorlib}/CPAN/LWP
+%{perl_vendorlib}/CPAN/LWP/UserAgent.pm
 %{_mandir}/man1/*
 %{_mandir}/man3/C*
