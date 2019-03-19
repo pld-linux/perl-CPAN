@@ -7,13 +7,13 @@
 Summary:	CPAN Perl module - query, download and build Perl modules from CPAN sites
 Summary(pl.UTF-8):	Moduł Perla CPAN - odpytywanie, ściąganie i budowanie modułów Perla z serwisów CPAN
 Name:		perl-CPAN
-Version:	1.9402
+Version:	2.26
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/CPAN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	70e43824c20cde64aa7b1b9e684b119f
+# Source0-md5:	f8b88baa35bd6ae582d3dd9b6c5e4771
 URL:		http://search.cpan.org/dist/CPAN/
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
@@ -58,14 +58,25 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Todo
 %attr(755,root,root) %{_bindir}/cpan
+%attr(755,root,root) %{_bindir}/cpan-mirrors
 %{perl_vendorlib}/*.pm
+%{perl_vendorlib}/App/Cpan.pm
 %dir %{perl_vendorlib}/CPAN
 %{perl_vendorlib}/CPAN/*.pm
+%dir %{perl_vendorlib}/CPAN/API
+%{perl_vendorlib}/CPAN/API/HOWTO.pod
 %dir %{perl_vendorlib}/CPAN/Exception
 %{perl_vendorlib}/CPAN/Exception/*.pm
 %dir %{perl_vendorlib}/CPAN/FTP
 %{perl_vendorlib}/CPAN/FTP/netrc.pm
+%dir %{perl_vendorlib}/CPAN/HTTP
+%{perl_vendorlib}/CPAN/HTTP/*.pm
+%dir %{perl_vendorlib}/CPAN/Kwalify
+%{perl_vendorlib}/CPAN/Kwalify/distroprefs*
 %dir %{perl_vendorlib}/CPAN/LWP
 %{perl_vendorlib}/CPAN/LWP/UserAgent.pm
+%dir %{perl_vendorlib}/CPAN/Plugin
+%{perl_vendorlib}/CPAN/Plugin/*.pm
 %{_mandir}/man1/*
+%{_mandir}/man3/App::Cpan.3pm*
 %{_mandir}/man3/C*
